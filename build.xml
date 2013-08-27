@@ -77,7 +77,7 @@
 	<!-- Compiles all source and moves all resources, templates, and configuration into the compiled classes directory -->
 	<target name="compile" depends="clean,init" description="compile the source" >
 		
-		<ivy:cachepath pathid="ivy.cachepath.dep" conf="deployment"/>
+		<ivy:cachepath pathid="ivy.cachepath.dep" conf="appdep"/>
 		<ivy:cachepath pathid="ivy.cachepath.build" conf="build"/>
 		
 		<!-- use the ivy dependencies as well as the jars in the ${lib} directory -->
