@@ -115,7 +115,7 @@
 		</copy>
 		
 		<!-- Copies the resources to a place in compiled classes tree -->
-		<copy todir="${dist}/${app.package.root}/resoures">
+		<copy todir="${dist}/${app.package.root}/resources">
 			<fileset dir="${resources}" >
 			</fileset>
 		</copy>
