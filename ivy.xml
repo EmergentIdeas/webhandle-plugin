@@ -15,6 +15,7 @@
     	<conf name="appdep" />
     	<conf name="test" />
     	<conf name="sources" />
+    	<conf name="empty" />
     </configurations>
     <publications>
     	<artifact name="change-me-to-project-name" type="jar" conf="appdep" />

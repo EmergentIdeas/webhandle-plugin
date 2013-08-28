@@ -63,6 +63,13 @@
 		<delete dir="${artifacts}"/>
 	</target>
 	
+	<!-- deletes this module from the cache so that subsequent publications of the same version will be picked up -->
+	<target name="delcache">
+		<ivy:cachepath pathid="ivy.cachepath.dne" conf="empty"/>
+		<echo message="deleting cache dir: ${ivy.cache.dir}/${organisation}/${ant.project.name}"></echo>
+	  	<delete dir="${ivy.cache.dir}/${organisation}/${ant.project.name}" />
+	</target>
+	
 	<!-- creates all of the required directories -->
 	<target name="init">
 		<property file="buildNumber.properties" />
@@ -128,7 +135,7 @@
 	
 	<!-- publishes the jars to the local repo so that they can be commited to git, moved to a server, etc. -->
 	<!-- If you're beyond the 1.0.0.x stage, you can change that version number here -->
-	<target name="pub" depends="dist" >
+	<target name="pub" depends="delcache,dist" >
 		<ivy:publish resolver="local-resolver" pubrevision="1.0.0.${build.number}" update="true" overwrite="true" organisation="${organisation}">
 			<artifacts pattern="${artifacts}/[organisation]-[artifact].[ext]" />
 		</ivy:publish>
