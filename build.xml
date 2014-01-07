@@ -159,6 +159,7 @@
 			<fileset dir="${lib}" >
 				<include name="*.jar"/>
 			</fileset>
+			<path location="${dist}" />
 		</path>
 		
 		<!-- Compile the java code from ${src} into ${dist} -->
