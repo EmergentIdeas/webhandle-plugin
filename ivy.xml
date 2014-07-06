@@ -22,7 +22,7 @@
     	<artifact name="change-me-to-project-name-sources" type="source" ext="jar" conf="sources"/>
     </publications>
     <dependencies>
-    	<dependency org="com.emergentideas" name="webhandle" rev="[1.0.0.14,)" conf="build" />	
+    	<dependency org="com.emergentideas" name="webhandle" rev="[1.0.0.24,)" conf="build" />	
     	
     	<!-- For the test app -->
 		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="test->appdep"/>
