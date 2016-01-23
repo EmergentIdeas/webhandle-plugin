@@ -13,3 +13,4 @@ sed -i "s/change-me-to-project-name/$projectName/g" ivy.xml
 sed -i "s/webhandle-plugin/$projectName/g" .project
 
 echo "build.xml, .project, and ivy.xml changed"
+git remote rename origin plugin

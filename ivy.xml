@@ -16,10 +16,18 @@
     	<conf name="test" />
     	<conf name="sources" />
     	<conf name="empty" />
+ 		<conf name="javabin" />
+		<conf name="resources" />
+		<conf name="templates" />
+		<conf name="configuration" />
     </configurations>
     <publications>
     	<artifact name="change-me-to-project-name" type="jar" conf="appdep" />
-    	<artifact name="change-me-to-project-name-sources" type="source" ext="jar" conf="sources"/>
+ 		<artifact name="change-me-to-project-name-javabin" type="jar" conf="javabin" />
+    	<artifact name="change-me-to-project-name-javabin-sources" type="source" ext="jar" conf="sources"/>
+		<artifact name="change-me-to-project-name-resources" type="zip" conf="resources" />
+		<artifact name="change-me-to-project-name-templates" type="zip" conf="templates" />
+		<artifact name="change-me-to-project-name-configuration" type="zip" conf="configuration" />
     </publications>
     <dependencies>
     	<dependency org="com.emergentideas" name="webhandle" rev="[1.0.0.24,)" conf="build" />	
