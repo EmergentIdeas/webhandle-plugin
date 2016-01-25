@@ -9,7 +9,7 @@
 		Change them to your organization name and the name of this plugin
 	 -->
     <info organisation="change-me-to-organization-name" module="change-me-to-project-name"/>
-    <configurations defaultconfmapping="build->*;deployment->default;test->default">
+    <configurations defaultconfmapping="build->*;deployment->default;test->default;deps->default">
     	<conf name="build" />
     	<conf name="deployment" />
     	<conf name="appdep" />
@@ -20,6 +20,7 @@
 		<conf name="resources" />
 		<conf name="templates" />
 		<conf name="configuration" />
+		<conf name="deps" />
     </configurations>
     <publications>
     	<artifact name="change-me-to-project-name" type="jar" conf="appdep" />
