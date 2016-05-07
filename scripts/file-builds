@@ -21,7 +21,6 @@ if [ ${#newerjs} -ne 0 ] || [ ${#newertmpl} -ne 0 ]
 then
 echo 'building js'
 cd resources/change-me-to-project-name/js
-node_modules/browserify/bin/cmd.js -d index.js > plugin.debug.js 2> ../js-build-errors.txt
-node_modules/browserify/bin/cmd.js index.js > plugin.js
+node_modules/browserify/bin/cmd.js -d plugin.js > plugin.debug.js 2> ../../../js-build-errors.txt
 cd ../../..
 fi
