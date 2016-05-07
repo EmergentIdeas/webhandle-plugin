@@ -148,6 +148,8 @@
 
 		<exec executable="scripts/install-js-deps">
 		</exec>
+		<exec executable="scripts/deps-by-script">
+		</exec>
 	</target>
 
 	<!-- Compiles all source and moves all resources, templates, and configuration into the compiled classes directory -->

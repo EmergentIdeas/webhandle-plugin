@@ -1,0 +1,7 @@
+#!/bin/bash
+curl https://codeload.github.com/madebysource/lesshat/legacy.zip/v3.0.2 > test-resources/lesshat.zip
+cd test-resources
+unzip lesshat.zip
+rm lesshat.zip
+mv madebysource* lesshat
+cd ..
