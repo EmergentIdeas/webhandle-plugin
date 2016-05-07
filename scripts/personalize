@@ -12,6 +12,7 @@ sed -i "s/change-me-to-project-name/$projectName/g" ivy.xml
 
 sed -i "s/change-me-to-project-name/$projectName/g" scripts/minify
 sed -i "s/change-me-to-project-name/$projectName/g" scripts/file-builds
+sed -i "s/change-me-to-project-name/$projectName/g" scripts/insall-js-deps
 
 sed -i "s/webhandle-plugin/$projectName/g" .project
 
