@@ -10,9 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "less": "^2.6.1",
-    "yuicompressor": "^2.4.8"
+    "yuicompressor": "^2.4.8",
+    "browserify": "^13.0.1"
   },
   "dependencies": {
-    "browserify": "^13.0.1"
+    
   }
 }
