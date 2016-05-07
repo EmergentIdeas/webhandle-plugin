@@ -1,0 +1,6 @@
+cd resources/change-me-to-project-name/js
+node_modules/yuicompressor/nodejs/cli.js plugin.js > plugin.min.js
+cd ../css
+node_modules/yuicompressor/nodejs/cli.js change-me-to-project-name.css > change-me-to-project-name.min.css
+cd ../../..
+

@@ -7,4 +7,10 @@ jetty
 testAppBin
 ivylibs
 db
+node_modules
 javabin
+dep-configuration
+dep-resources
+dep-templates
+js-build-errors.txt
+css-build-errors.txt

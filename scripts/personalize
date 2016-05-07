@@ -10,7 +10,17 @@ sed -i "s,change/me/to/your/project/package/name,$packagePath,g" build.xml
 sed -i "s/change-me-to-organization-name/$orgName/g" ivy.xml
 sed -i "s/change-me-to-project-name/$projectName/g" ivy.xml
 
+sed -i "s/change-me-to-project-name/$projectName/g" scripts/minify
+sed -i "s/change-me-to-project-name/$projectName/g" scripts/file-builds
+
 sed -i "s/webhandle-plugin/$projectName/g" .project
 
+sed -i "s/change-me-to-project-name/$projectName/g" resources/change-me-to-project-name/js/package.json
+mv resources/change-me-to-project-name/css/change-me-to-project-name.less resources/change-me-to-project-name/css/$projectName.less
+mv resources/change-me-to-project-name resources/$projectName
+mv templates/change-me-to-project-name templates/$projectName
+mv configuration/change-me-to-project-name configuration/$projectName
+
+
 echo "build.xml, .project, and ivy.xml changed"
-git remote rename origin plugin
+#git remote rename origin plugin

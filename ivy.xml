@@ -20,6 +20,10 @@
 		<conf name="resources" />
 		<conf name="templates" />
 		<conf name="configuration" />
+		<conf name="testjavabin" />
+		<conf name="testresources" />
+		<conf name="testtemplates" />
+		<conf name="testconfiguration" />
 		<conf name="deps" />
     </configurations>
     <publications>
@@ -34,7 +38,26 @@
     	<dependency org="com.emergentideas" name="webhandle" rev="[1.0.0.24,)" conf="build" />	
     	
     	<!-- For the test app -->
-		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="test->appdep"/>
+		<dependency org="com.emergentideas" name="oak-login" rev="latest.integration" conf="testjavabin->javabin" />
+		<dependency org="com.emergentideas" name="oak-login" rev="latest.integration" conf="testresources->resources" />
+		<dependency org="com.emergentideas" name="oak-login" rev="latest.integration" conf="testtemplates->templates" />
+		<dependency org="com.emergentideas" name="oak-login" rev="latest.integration" conf="testconfiguration->configuration" />
+		<dependency org="com.emergentideas" name="oak-login" rev="latest.integration" conf="appdep" />
+		
+
+		<dependency org="com.emergentideas" name="crud-tools" rev="latest.integration" conf="testjavabin->javabin" />
+		<dependency org="com.emergentideas" name="crud-tools" rev="latest.integration" conf="testresources->resources" />
+		<dependency org="com.emergentideas" name="crud-tools" rev="latest.integration" conf="testtemplates->templates" />
+		<dependency org="com.emergentideas" name="crud-tools" rev="latest.integration" conf="testconfiguration->configuration" />
+		<dependency org="com.emergentideas" name="crud-tools" rev="latest.integration" conf="appdep" />
+
+
+		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="testjavabin->javabin" />
+		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="testresources->resources" />
+		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="testtemplates->templates" />
+		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="testconfiguration->configuration" />
+		<dependency org="com.emergentideas" name="page-editor" rev="latest.integration" conf="appdep" />
+
 		<dependency org="com.emergentideas" name="oak_stdtemplates" rev="[1.0,)" conf="test->appdep" /> 
 		<dependency org="org.hsqldb" name="hsqldb" rev="2.3.1" conf="test->default"/>
 		
