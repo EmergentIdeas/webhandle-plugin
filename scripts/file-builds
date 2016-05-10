@@ -1,22 +1,16 @@
 #!/bin/bash
 newerless=`find resources/change-me-to-project-name/css -cnewer resources/change-me-to-project-name/css/change-me-to-project-name.css -name '*.less'`
-if [ ${#newerless} -ne 0 ] 
+newertestless=`find test-resources -cnewer test-resources/test.css -name '*.less'`
+if [ ${#newerless} -ne 0 ] || [ ${#newertestless} -ne 0 ] 
 then
 	echo 'building less'
 	echo 'Pages css errors:' > css-build-errors.txt
-	lessc resources/change-me-to-project-name/css/change-me-to-project-name.less > resources/change-me-to-project-name/css/change-me-to-project-name.css 2>> css-build-errors.txt
-fi
-
-newerless=`find test-resources -cnewer test-resources/test.css -name '*.less'`
-if [ ${#newerless} -ne 0 ] 
-then
-	echo 'building test less'
-	echo 'Test css errors:' >> css-build-errors.txt
+	lessc resources/change-me-to-project-name/css/plugin.less > resources/change-me-to-project-name/css/change-me-to-project-name.css 2>> css-build-errors.txt
 	lessc test-resources/test.less > test-resources/test.css 2>> css-build-errors.txt
 fi
 
-newerjs=`find resources/change-me-to-project-name/js -cnewer resources/change-me-to-project-name/js/plugin.js -name '*.js'`
-newertmpl=`find resources/change-me-to-project-name/js/templates -cnewer resources/change-me-to-project-name/js/plugin.js -name '*.tmpl'`
+newerjs=`find resources/change-me-to-project-name/js -cnewer resources/change-me-to-project-name/js/plugin.debug.js -name '*.js'`
+newertmpl=`find resources/change-me-to-project-name/js/templates -cnewer resources/change-me-to-project-name/js/plugin.debug.js -name '*.tmpl'`
 if [ ${#newerjs} -ne 0 ] || [ ${#newertmpl} -ne 0 ]
 then
 echo 'building js'

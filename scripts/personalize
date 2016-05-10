@@ -17,6 +17,8 @@ sed -i "s/change-me-to-project-name/$projectName/g" scripts/install-js-deps
 sed -i "s/webhandle-plugin/$projectName/g" .project
 
 sed -i "s/change-me-to-project-name/$projectName/g" resources/change-me-to-project-name/js/package.json
+sed -i "s/change-me-to-project-name/$projectName/g" resources/change-me-to-project-name/css/plugin.less
+
 mv resources/change-me-to-project-name/css/change-me-to-project-name.css resources/change-me-to-project-name/css/$projectName.css
 mv resources/change-me-to-project-name/css/change-me-to-project-name.less resources/change-me-to-project-name/css/$projectName.less
 mv resources/change-me-to-project-name resources/$projectName
