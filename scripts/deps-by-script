@@ -1,7 +1,10 @@
 #!/bin/bash
-curl https://codeload.github.com/madebysource/lesshat/legacy.zip/v3.0.2 > test-resources/lesshat.zip
+#!/bin/bash
+curl https://registry.npmjs.org/lesshat/-/lesshat-4.1.0.tgz > test-resources/lesshat.tgz
 cd test-resources
-unzip lesshat.zip
-rm lesshat.zip
-mv madebysource* lesshat
+tar -xzf lesshat.tgz
+rm lesshat.tgz
+mv package/* lesshat
+rmdir package
 cd ..
+
